@@ -1,7 +1,7 @@
-<x-app-layout>
+<x-app-layout title="Gak">
             <div class="container px-4 px-lg-5 text-center">
             <x-card title='HMMMMMMMMM SEDIHHHH </3'>
-                <em>yauda BYE!!</em>
+                <p>yauda BYE!!</p>
                 </x-card>
             </div>
 </x-app-layout>

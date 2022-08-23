@@ -11,9 +11,10 @@ class AppLayout extends Component
      *
      * @return void
      */
-    public function __construct()
+    public $title;
+    public function __construct($title = 'Home')
     {
-        //
+        $this->title = $title;
     }
 
     /**
@@ -25,4 +26,6 @@ class AppLayout extends Component
     {
      return view('layouts.app');
     }
+
+    
 }
