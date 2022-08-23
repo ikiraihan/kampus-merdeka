@@ -1,9 +1,7 @@
-@extends('layouts.app')
-@section('content')
-        <header class="masthead d-flex align-items-center">
+<x-app-layout>
             <div class="container px-4 px-lg-5 text-center">
-                <h1 class="mb-1">:(((((((((((((((((</h1>
-                <h3 class="mb-5"><em>yauda bye:(</em></h3>
+            <x-card title='HMMMMMMMMM SEDIHHHH </3'>
+                <em>yauda BYE!!</em>
+                </x-card>
             </div>
-        </header>
-@endsection
+</x-app-layout>
