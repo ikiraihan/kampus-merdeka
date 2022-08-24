@@ -122,6 +122,8 @@ return [
     */
 
     'key' => env('APP_KEY'),
+    
+    'kmKey' => env('KM_KEY','default'),
 
     'cipher' => 'AES-256-CBC',
 
