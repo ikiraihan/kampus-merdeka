@@ -20,6 +20,7 @@ return new class extends Migration
             $table->double('price');
             $table->longtext('description');
             $table->string('photo',255);
+            $table->softDeletes();
             $table->timestamps();
         });
     }
@@ -32,5 +33,9 @@ return new class extends Migration
     public function down()
     {
         Schema::dropIfExists('products');
+
+        Schema::table('products', function (Blueprint $table) {
+            $table->softDeletes();
+        });
     }
 };

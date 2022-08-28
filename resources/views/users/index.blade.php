@@ -1,12 +1,13 @@
 <x-app-layout title="Users">
     <div class="container">
         <x-card title='Pacar'>
+        <td><a class="btn btn-primary btn-xl" href="/users/create">Create</a></td>
             <table class="table">
                 <thead>
                     <th>#</th>
                     <th>Name</th>
                     <th>Email</th>
-                    <th>Twitter</th>
+                    <th>City</th>
                     <th>More</th>
                 </thead>
                 <tbody>
@@ -16,8 +17,8 @@
                         <td>{{ ++$key }}</td>
                         <td>{{ $user['name'] }}</td>
                         <td>{{ $user['email'] }}</td>
-                        <td>{{ $user['twitter'] }}</td>
-                        <td><a class="btn btn-primary btn-xl" href="/users/{{ $user['name'] }}">More</a></td>
+                        <td>{{ $user['city'] }}</td>
+                        <td><a class="btn btn-primary btn-xl" href="/users/show/{{ $user['name'] }}">More</a></td>
                     </tr>
                     @endforeach 
                 @else

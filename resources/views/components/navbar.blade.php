@@ -18,7 +18,10 @@
                     <a class="nav-link" href="/gak">Gak</a>
                 </li>
                 <li class="nav-item">
-	                <a class="nav-link" href="/users">Daftar Pacar</a>
+	                <a class="nav-link" href="/users">User</a>
+                </li>
+                <li class="nav-item">
+	                <a class="nav-link" href="/products">Produk</a>
                 </li>
             </ul>
         </div>
