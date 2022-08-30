@@ -23,6 +23,9 @@
                 <li class="nav-item">
 	                <a class="nav-link" href="/products">Produk</a>
                 </li>
+                <li class="nav-item">
+	                <a class="nav-link" href="/products/index">Produk DataTable</a>
+                </li>
             </ul>
         </div>
     </div>
