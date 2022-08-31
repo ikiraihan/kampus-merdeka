@@ -52,6 +52,9 @@
                                     <a class="nav-link" href="/products">Produk</a>
                             </li>
                             <li class="nav-item">
+	                                <a class="nav-link" href="/authlog">Auth Log</a>
+                            </li>
+                            <li class="nav-item">
 	                                <a class="nav-link" href="/products/index">Produk DataTable</a>
                             </li>
                             <li class="nav-item dropdown">

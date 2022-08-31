@@ -5,6 +5,7 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\AuthLogController;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,6 +25,8 @@ Route::get('/', function () {
 Route::get('/home', [HomeController::class,'index'])->name('home');
 Route::get('/mau', [PageController::class, 'mau']);
 Route::get('/gak', [PageController::class, 'gak']);
+
+Route::get('/authlog', [AuthLogController::class, 'index']);
 
 Route::get('/users', [UserController::class, 'index']);
 Route::get('/users/show/{user}', [UserController::class, 'show']);

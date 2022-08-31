@@ -17,7 +17,7 @@ class ProductController extends Controller
     
          return view('products.index', [
                 'products' => Product::get(),
-                'stores ' => $stores ,
+                'stores' => $stores ,
          ]);
     }  
 
