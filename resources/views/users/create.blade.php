@@ -1,4 +1,4 @@
-<x-app-layout title="Users">
+<x-dash-layout title="Users">
     <div class="container">
         <x-card title='Create User'>
         <form method="post" action="/users/store">
@@ -24,4 +24,4 @@
         </form>
         </x-card>
     </div>
-</x-app-layout>
+</x-dash-layout>

@@ -17,11 +17,11 @@ use App\Http\Controllers\ProductController;
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
+Route::get('/', function () {
+    return view('welcome');
+});
 //Route::get('/welcome', fn () => view('welcome'));
-Route::get('/', HomeController::class);
+Route::get('/home', [HomeController::class,'index'])->name('home');
 Route::get('/mau', [PageController::class, 'mau']);
 Route::get('/gak', [PageController::class, 'gak']);
 
@@ -45,3 +45,7 @@ Route::get('/products/destroy_permanent/{id}', [ProductController::class, 'destr
 Route::middleware('kmkey')->group(function () {
     Route::get('/dashboard', fn () => 'Dashboard')->name('dashboard');
 });
+
+Auth::routes();
+
+//Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

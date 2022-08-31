@@ -1,4 +1,4 @@
-<x-app-layout title="Users">
+<x-dash-layout title="Users">
     <div class="container">
         <x-card title='Pacar'>
         <td><a class="btn btn-primary btn-xl" href="/users/create">Create</a></td>
@@ -34,4 +34,4 @@
             </table>
         </x-card>
     </div>
-</x-app-layout>
+</x-dash-layout>

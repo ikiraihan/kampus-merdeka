@@ -1,4 +1,4 @@
-<x-app-layout title="products">
+<x-dash-layout title="products">
     <div class="container">
         <x-card title='Create Product'>
         <form method="post" action="/products/store">
@@ -32,4 +32,4 @@
         </form>
         </x-card>
     </div>
-</x-app-layout>
+</x-dash-layout>

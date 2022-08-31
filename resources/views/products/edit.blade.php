@@ -1,4 +1,4 @@
-<x-app-layout title="products">
+<x-dash-layout title="products">
     <div class="container">
         <x-card title='Edit Product'>
         <form action="/products/update/{{$products -> id}}" method="post" >
@@ -36,4 +36,4 @@
         </form>
         </x-card>
     </div>
-</x-app-layout>
+</x-dash-layout>
