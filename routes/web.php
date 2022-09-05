@@ -57,4 +57,3 @@ Route::get('/users/datatable' , [UserController::class, 'index2']);
 
 Route::post('/import/user', [ExcellController::class, 'importUser'])->name('import.user');
 Route::get('/export/user', [ExcellController::class, 'exportUser'])->name('export.user');
-

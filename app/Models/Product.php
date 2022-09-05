@@ -27,7 +27,7 @@ class Product extends Model
     //     ]);
     // }
 
-    public function stores()
+    public function store()
         {
             return $this->belongsTo(Store::class);
         }
