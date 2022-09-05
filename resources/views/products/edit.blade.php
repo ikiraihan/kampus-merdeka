@@ -28,10 +28,10 @@
                 <label>Description</label>
                 <input type="text" class="form-control" name="description" id="description"value="{{ $products->description }}">
             </div>
-            <div class="form-group">
+            <!-- <div class="form-group">
                 <label>photo</label>
                 <input type="text" class="form-control" name="photo" id="photo"value="{{ $products->photo }}">
-            </div>
+            </div> -->
             <input type="submit" value="Submit" class="btn btn-dark btn-block">
         </form>
         </x-card>

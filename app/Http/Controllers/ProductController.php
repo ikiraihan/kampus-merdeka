@@ -52,17 +52,22 @@ class ProductController extends Controller
     }
 
     public function store(Request $request)
-    {
-            $validatedData = $request->validate([
-                'name'  =>  'required',
-                'store_id'  =>  'required',
-                'slug' =>  'required',
-                'price'  => 'required',
-                'description'  => 'required',
-                'photo'  => 'required'
+    {       
+        $file = $request->file('photo');
+        $nama_file = time()."_".$file->getClientOriginalName();
+
+        Product::create([
+            'name' => $request->name,
+            'slug' => $request->slug,
+            'price' => $request->price,
+            'description' => $request->description,
+            'photo' => $nama_file,
+            'store_id' => $request->store_id,
         ]);
 
-        Product::create($validatedData);
+        $file->move(public_path().'/img/uploads', $nama_file);
+
+        // Product::create($validatedData);
 
         return redirect('/products');
     } 
@@ -85,7 +90,6 @@ class ProductController extends Controller
             $prod->slug  = $request->slug;
                     $prod->description  = $request->description;
                     $prod->price  = $request->price;
-                    $prod->photo  = $request->photo;
             $prod->save();
 
                     return redirect('/products');

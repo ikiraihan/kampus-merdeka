@@ -25,7 +25,7 @@
                         <td>{{ $prod['slug'] }}</td>
                         <td>{{ $prod['price'] }}</td>
                         <td>{{ $prod['description'] }}</td>
-                        <td>{{ $prod['photo'] }}</td>
+                        <td><img width="150px" src="{{ url('/img/uploads/'.$prod['photo'] ) }}"></td>
                         <td><a class="btn btn-success btn-xl" href="/products/edit/{{ $prod['id'] }}">edit</a></td>
                         <td><a class="btn btn-danger btn-xl" href="/products/destroy/{{ $prod['id'] }}">delete</a></td>
                     </tr>
