@@ -27,6 +27,9 @@
 	                <a class="nav-link" href="/authlog">Auth Log</a>
                 </li>
                 <li class="nav-item">
+	                <a class="nav-link" href="/users/datatable">Users DataTable</a>
+                </li>
+                <li class="nav-item">
 	                <a class="nav-link" href="/products/index">Produk DataTable</a>
                 </li>
             </ul>

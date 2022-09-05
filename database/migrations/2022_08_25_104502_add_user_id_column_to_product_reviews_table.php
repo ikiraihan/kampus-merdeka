@@ -14,7 +14,9 @@ return new class extends Migration
     public function up()
     {
         Schema::table('product_reviews', function (Blueprint $table) {
-            $table->foreignId('user_id')->after('id')->constrained('users');
+            // $table->index('user_id');
+            // $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+            $table->foreignId('user_id')->constrained('users')->cascadeOnUpdate()->cascadeOnDelete();
         });
     }
 

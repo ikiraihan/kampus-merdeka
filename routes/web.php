@@ -6,6 +6,7 @@ use App\Http\Controllers\PageController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\AuthLogController;
+use App\Http\Controllers\ExcellController;
 
 /*
 |--------------------------------------------------------------------------
@@ -52,3 +53,8 @@ Route::middleware('kmkey')->group(function () {
 Auth::routes();
 
 //Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/users/datatable' , [UserController::class, 'index2']);
+
+Route::post('/import/user', [ExcellController::class, 'importUser'])->name('import.user');
+Route::get('/export/user', [ExcellController::class, 'exportUser'])->name('export.user');
+

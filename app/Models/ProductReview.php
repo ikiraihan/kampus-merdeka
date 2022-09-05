@@ -10,12 +10,18 @@ class ProductReview extends Model
     use HasFactory;
 
     protected $table = 'product_reviews';
+    protected $fillable = [
+        'product_id',
+        'score',
+        'review',
+        'user_id',
+    ];
 
     public function index()
     {
-        return view('users.index', [
-                'users' => User::get(),
-        ]);
+        // return view('users.index', [
+        //         'users' => User::get(),
+        // ]);
     }
 
     public function users()
