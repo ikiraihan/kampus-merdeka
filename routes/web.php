@@ -24,8 +24,8 @@ Route::get('/', function () {
 });
 //Route::get('/welcome', fn () => view('welcome'));
 Route::get('/home', [HomeController::class,'index'])->name('home');
-Route::get('/mau', [PageController::class, 'mau']);
-Route::get('/gak', [PageController::class, 'gak']);
+// Route::get('/mau', [PageController::class, 'mau']);
+// Route::get('/gak', [PageController::class, 'gak']);
 
 Route::get('/authlog', [AuthLogController::class, 'index']);
 
@@ -35,7 +35,7 @@ Route::get('/users/create', [UserController::class, 'create'])->name('users.crea
 Route::post('/users/store', [UserController::class, 'store'])->name('users.store');
 
 Route::get('/products', [ProductController::class, 'index']);
-Route::get('/products/index', [ProductController::class, 'index2']);
+Route::get('/products/datatables', [ProductController::class, 'dataTables']);
 Route::get('/products/create', [ProductController::class, 'create'])->name('products.create');
 Route::post('/products/store', [ProductController::class, 'store'])->name('products.store');
 Route::get('/products/edit/{id}', [ProductController::class, 'edit'])->name('products.edit');

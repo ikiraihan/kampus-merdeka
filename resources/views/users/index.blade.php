@@ -1,7 +1,7 @@
 <x-dash-layout title="Users">
     <div class="container">
-        <x-card title='Pacar'>
-        <td><a class="btn btn-primary btn-xl" href="/users/create">Create</a></td>
+        <x-card title='Users'>
+        <td><a class="btn btn-dark btn-xl" href="/users/create">Create</a></td>
             <table class="table">
                 <thead>
                     <th>#</th>
@@ -18,7 +18,7 @@
                         <td>{{ $user['name'] }}</td>
                         <td>{{ $user['email'] }}</td>
                         <td>{{ $user['city'] }}</td>
-                        <td><a class="btn btn-primary btn-xl" href="/users/show/{{ $user['name'] }}">More</a></td>
+                        <td><a class="btn btn-success btn-xl" href="/users/show/{{ $user['name'] }}">More</a></td>
                     </tr>
                     @endforeach 
                 @else

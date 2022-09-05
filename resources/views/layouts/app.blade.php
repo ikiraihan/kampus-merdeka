@@ -52,12 +52,12 @@
                             <li class="nav-item">
                                     <a class="nav-link" href="/home">Home</a>
                             </li>
-                            <li class="nav-item">
+                            <!-- <li class="nav-item">
                                     <a class="nav-link" href="/mau">Mau</a>
                             </li>
                             <li class="nav-item">
                                     <a class="nav-link" href="/gak">Gak</a>
-                            </li>
+                            </li> -->
                             <li class="nav-item">
                                     <a class="nav-link" href="/users">Users</a>
                             </li>
@@ -65,7 +65,13 @@
                                     <a class="nav-link" href="/products">Produk</a>
                             </li>
                             <li class="nav-item">
-	                                <a class="nav-link" href="/products/index">Produk DataTable</a>
+                                <a class="nav-link" href="/authlog">Auth Log</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/users/datatable">Users DataTable</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/products/index">Produk DataTable</a>
                             </li>
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>

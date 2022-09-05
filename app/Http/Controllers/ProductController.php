@@ -21,7 +21,7 @@ class ProductController extends Controller
          ]);
     }  
 
-    public function index2(){
+    public function dataTables(){
 
         $data = Product::get();
 
