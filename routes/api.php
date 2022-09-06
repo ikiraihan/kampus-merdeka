@@ -2,6 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\API\PostController;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,5 +27,9 @@ Route::post('/login', [App\Http\Controllers\API\AuthController::class, 'login'])
 //Protecting Routes
 Route::group(['middleware' => ['auth:sanctum']], function () {
     // API route for logout user
+    Route::get('/profile', [App\Http\Controllers\API\AuthController::class, 'profile']);
     Route::post('/logout', [App\Http\Controllers\API\AuthController::class, 'logout']);
 });
+
+Route::resource('/post', PostController::class)->middleware('auth:sanctum');
+Route::post('/post/store', [App\Http\Controllers\API\PostController::class, 'store'])->middleware('auth:sanctum');
