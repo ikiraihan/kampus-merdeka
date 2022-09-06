@@ -9,9 +9,9 @@ use Illuminate\Support\Facades\Hash;
 use Maatwebsite\Excel\Concerns\ToCollection;
 use Maatwebsite\Excel\Concerns\WithHeadingRow;
 use App\Traits\RefreshDatabaseWithData;
+use Maatwebsite\Excel\Concerns\ToModel;
 
-
-class UserImport implements ToCollection, WithHeadingRow
+class UserImport implements ToModel
 {
     public function sheets(): array
     {
@@ -20,16 +20,25 @@ class UserImport implements ToCollection, WithHeadingRow
         ];
     }
 
-    public function collection(Collection $rows)
+    // public function collection(Collection $rows)
+    // {
+    //         //$truncate = DB::table('users')->delete();
+    //         foreach($rows as $row){
+    //            $user = User::create([
+    //                 'name'      => $row[1],
+    //                 'email'     => $row[2],
+    //                 'city'     => $row[3],
+    //                 'password'  => $row[4],
+    //             ]);
+    //         }
+    // }
+    public function model(array $row)
     {
-            $truncate = DB::table('users')->delete();
-            foreach($rows as $row){
-               $user = User::create([
-                    'name'      => $row['name'],
-                    'email'     => $row['email'],
-                    'city'     => $row['city'],
-                    'password'  => Hash::make($row['pass']),
-                ]);
-            }
+        return new User([
+                    'name'      => $row[1],
+                    'email'     => $row[2],
+                    'city'     => $row[3],
+                    'password'  => $row[4],
+        ]);
     }
 }

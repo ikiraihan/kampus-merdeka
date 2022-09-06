@@ -17,7 +17,7 @@
                     <th></th>
                 </thead>
                 <tbody>
-                @empty(!$products)
+                @if(count($products))
                     @foreach ($products as $key => $prod)
                     <tr>
                         <td>{{ ++$key }}</td>
@@ -32,13 +32,13 @@
                     @endforeach 
                 @else
                     <tr>
-                        <td colspan="4">
+                        <td colspan="10">
                             <div class='text-center'>
                                 Data not found
                             </div>
                         </td>
                     </tr>
-                @endempty
+                @endif
                 </tbody>
             </table>
         </x-card>

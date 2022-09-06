@@ -24,8 +24,8 @@ class UserController extends Controller
     
          return view('users.index', [
                 'users' => User::get(),
-                'productReviews ' => $productReviews ,
-                'stores ' => $stores ,
+                // 'productReviews ' => $productReviews ,
+                // 'stores ' => $stores ,
          ]);
     }  
 
@@ -115,7 +115,7 @@ class UserController extends Controller
 
             // DB::beginTransaction();
             try {
-                $import_users = Excel::import(new UserImport(), public_path('/imports/user/' . $file_name));
+                $import_users = Excel::import(new UserImport, public_path('/imports/user/' . $file_name));
                 // DB::commit();
             } catch (Exception $err) {
                 // DB::rollback();
